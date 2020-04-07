@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+type forme struct {
+	long, larg, prof int
+}
+
+func (x forme) périmètre() int{
+	return 2*x.long + 2*x.larg
+}
+
+func (x *forme) aire() int{
+	return x.long * x.larg
+}
+
+func (x *forme) volume() int{
+	return x.long * x.larg * x.prof
+}
+
+func main() {
+	r := forme{long: 3, larg: 4, prof: 5}
+	
+	fmt.Println("périmètre: ", r.périmètre())
+	fmt.Println("aire: ", r.aire())
+	fmt.Println("volume: ", r.volume())
+	
+}
